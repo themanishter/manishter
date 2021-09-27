@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Like Hacker</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<style>
+      body {
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
+body section {
+  padding: .5em 1em;
+}
+body section p {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  color: #26de81;
+  text-shadow: 0px 0px 10px #26de81;
+}
+
+    </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<section id="code"></section>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script id="rendered-js">
+      let intervalID = window.setInterval(updateScreen, 400);
+let c = document.querySelector('#code');
+
+let txt = [
+'FORCE: XX0022. ENCYPT://000.222.2345',
+'TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1',
+'RETRY: REINDEER FLOTILLA',
+'Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0',
+'================================================',
+'Priority 1 // local / scanning...',
+'scanning ports...',
+'BACKDOOR FOUND (23.45.23.12.00000000)',
+'BACKDOOR FOUND (13.66.23.12.00110000)',
+'BACKDOOR FOUND (13.66.23.12.00110044)',
+'...',
+'...',
+'BRUTE.EXE -r -z',
+'...locating vulnerabilities...',
+'...vulnerabilities found...',
+'MCP/> DEPLOY CLU',
+'SCAN: __ 0100.0000.0554.0080',
+'SCAN: __ 0020.0000.0553.0080',
+'SCAN: __ 0001.0000.0554.0550',
+'SCAN: __ 0012.0000.0553.0030',
+'SCAN: __ 0100.0000.0554.0080',
+'SCAN: __ 0020.0000.0553.0080',
+'FFF BJDY **** ++home hack',
+'BACKDOOR FOUND (23.45.23.12.00000000)',
+'BACKDOOR FOUND (13.66.23.12.00110000)',
+'BACKDOOR FOUND (13.66.23.12.00110044)',
+'=============================================',
+'...',
+'...',
+'BRUTE.EXE -r -z',
+'...locating vulnerabilities...',
+'...vulnerabilities found...'];
+
+
+let docfrag = document.createDocumentFragment();
+
+function updateScreen() {
+  txt.push(txt.shift());
+  txt.forEach(e => {
+    let p = document.createElement('p');
+    p.textContent = e;
+    docfrag.appendChild(p);
+  });
+  while (c.firstChild) {
+    c.removeChild(c.firstChild);
+  }
+  c.appendChild(docfrag);
+}
+      //# sourceURL=pen.js
+    </script>
+</body>
+</html>
