@@ -1,0 +1,262 @@
+/* General styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+}
+
+#logo {
+  display: inline-block;
+}
+
+#logo-text {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+#search-container {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+#search-input {
+  width: 250px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.container {
+  flex: 1;
+  margin-top: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.card-img-top {
+  width: 100%; /* Makes the image take up the full width of the card */
+  height: auto; /* Maintains the aspect ratio */
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007BFF; /* Blue background */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Additional styles from bar.css */
+
+html, body {
+  font-family: "interface", sans-serif;
+  font-size: 12px;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding-top: 4.5em; /* Added to ensure main content is not hidden behind header */
+}
+
+a:visited {
+  color: inherit;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+#header, #footer {
+  width: 100%;
+  background-color: #110502;
+  color: #cccccc;
+}
+
+#header {
+  height: 4.5em;
+  position: fixed;
+  top: 0;
+  z-index: 1000; /* Ensure header stays above other content */
+}
+
+#header .contents {
+  max-width: 88.8888%;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: .75em;
+  box-sizing: border-box;
+}
+
+#logo {
+  position: relative;
+  display: block;
+  height: 100%;
+  float: left;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+#logo img {
+  float: left;
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+#logo-text {
+  display: none;
+  visibility: hidden;
+  color: #efefef;
+  font-family: "futura-pt", sans-serif;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 0 .75rem;
+}
+
+#main-menu-link {
+  float: right;
+  display: block;
+  height: 100%;
+  width: auto;
+  font-size: 1em;
+  line-height: 3em;
+}
+
+#main-menu-link a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+#main-content {
+  min-height: 60em;
+}
+
+#footer {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+#footer a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+#main-menu {
+  font-size: 1.5em;
+  list-style: none;
+  padding: .75rem 0;
+}
+
+#main-menu li {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #FFFFFF;
+  transition: all .15s ease-out;
+}
+
+#main-menu li:first-of-type {
+  border-top: 1px solid #FFFFFF;
+}
+
+#main-menu li:hover {
+  background-color: #FFFFFF;
+}
+
+#main-menu a {
+  width: 100%;
+  display: block;
+  padding: .75em;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 20em) {
+  #logo-text {
+    display: inline-block;
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 44em) {
+  body,
+  html {
+    font-size: 14px;
+  }
+  .mobile {
+    display: none;
+    visibility: hidden;
+  }
+  #main-menu {
+    position: fixed;
+    top: 0;
+    right: 5.5555%;
+    font-size: 1em;
+    margin: 0;
+  }
+  #main-menu li {
+    display: inline-block;
+    width: auto;
+    padding: 0 .75rem;
+    border: 0 !important;
+    transition: none;
+  }
+  #main-menu li:hover {
+    background-color: transparent;
+  }
+  #main-menu li a:hover {
+    color: #fefefe !important;
+    transition: all .25s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  body,
+  html {
+    font-size: 14px;
+  }
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Ensure it's behind other content */
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Softwares</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+    integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="assets/scripts/jquery/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="./foodr.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./style1.css">
+  <script src="https://use.typekit.net/kfp3ryc.js"></script>
+  <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+  <link rel="stylesheet" href="./bar.css">
+  <!-- partial:index.partial.html -->
+  <div id="app"></div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
+  <script src="./script1.js"></script>
+  <span id="top">&nbsp</span>
+  <div id="header">
+    <div class="contents">
+      <div id="logo">
+        <div id="logo-text">
+          Cracked Softwares
+        </div>
+      </div>
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for software" class="form-control">
+      </div>
+    </div>
+  </div>
+</head>
+
+<body>
+
+  
+  <!-- Main -->
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="photoshop.png" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Photoshop</h4>
+            <p class="card-text">2019 x64 bit</p>
+            <a href="#" class="download-btn btn btn-primary">Download</a>
+          </div>
+        </div>
+      </div>
+
+   
+
+    
+
+      <div class="col"></div>
+    </div>
+  </div>
+
+  <footer class="flex-rw">
+    <section class="footer-bottom-section flex-rw">
+      <div class="footer-bottom-wrapper">
+        <center>Copyright &#x00A9; 2024 Manish Ter</center>
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.getElementById('search-input');
+      const cards = document.querySelectorAll('.card');
+
+      // Debounce function to limit the rate at which the search function is invoked
+      function debounce(func, delay) {
+        let timeout;
+        return function() {
+          const context = this;
+          const args = arguments;
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(context, args), delay);
+        };
+      }
+
+      function searchCards() {
+        const query = searchInput.value.toLowerCase();
+
+        cards.forEach(function(card) {
+          const title = card.querySelector('.card-title').textContent.toLowerCase();
+          const author = card.querySelector('.card-text').textContent.toLowerCase();
+
+          if (title.includes(query) || author.includes(query)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      // Attach the debounced search function to the input event
+      searchInput.addEventListener('input', debounce(searchCards, 300));
+    });
+  </script>
+</body>
+
+</html>
